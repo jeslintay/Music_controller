@@ -1,30 +1,22 @@
 import React, { Component } from "react";
-import {render} from "react-dom";
+import { createRoot } from "react-dom/client";
 import HomePage from "./HomePage";
-import RoomJoinPage from "./RoomJoinPage";
-import CreateRoomPage from "./CreateRoomPage";
+
 
 export default class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        }
     }
 
-    render(){
-
+    render() {
         return (
-            // must have a parent element to wrap if not cannot run
-        <div> 
-            <HomePage/>
-            <CreateRoomPage/>
-            <RoomJoinPage/>
-            
-        </div>
+            <div>
+                <HomePage/>
+            </div>
         );
     }
 }
 
 const appDiv = document.getElementById("app");
-render(<App/>, appDiv);
+const root = createRoot(appDiv);  // Create a root.
+root.render(<App />);  // Render your app.

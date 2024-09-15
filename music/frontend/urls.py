@@ -3,5 +3,7 @@ from .views import index
 
 #main urls
 urlpatterns = [
-    path('', index)
+    path('', index),
+    path('join', index),
+    path('create', index)
 ]
